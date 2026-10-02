@@ -1,0 +1,31 @@
+var global = "global";
+
+fun makeCounter() {
+  var count = 0;
+  fun counter() {
+    count = count + 1;
+    return count;
+  }
+  return counter;
+}
+
+var c = makeCounter();
+print c();
+print c();
+
+{
+  var a = "first";
+  var b = "second";
+  {
+    var d = "inner";
+    print a + " " + b + " " + d + " " + global;
+    a = "changed";
+  }
+  print a;
+}
+
+fun fib(n) {
+  if (n < 2) return n;
+  return fib(n - 1) + fib(n - 2);
+}
+print fib(20);

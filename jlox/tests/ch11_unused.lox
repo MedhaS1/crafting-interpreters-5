@@ -1,0 +1,7 @@
+fun test() {
+  var used = "used";
+  var notUsed = "never read";
+  var onlyAssigned;
+  onlyAssigned = "assigned but never read";
+  print used;
+}
